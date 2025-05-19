@@ -1,0 +1,10 @@
+In a heterogeneous graph neural network using the ACM dataset, there are three types of nodes: Paper (P), Author (A), and Subject (S). 
+The goal is to classify the node types of paper nodes. Using the metapath approach, the following metapaths are constructed: PA, PS, PAP, PSP, PAPAP, PSPSP.
+Below is an explanation of the practical meanings of these metapaths and their importance scores (a value between 0 and 1) for the node type classification task.
+Each metapath should be in this format:
+<metapath>
+<name>metapath's name</name>
+<meaning>metapath's meaning</meaning>
+<score>importance score</score>
+<reason>reason for the importance score</reason>
+</metapath>
