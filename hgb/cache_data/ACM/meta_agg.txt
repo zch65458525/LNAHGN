@@ -1,0 +1,299 @@
+Here is the formatted explanation of the metapaths with their practical meanings and importance scores for the node type classification task in the ACM dataset:
+
+---
+
+<metapath>  
+<name>P</name>  
+<meaning>Single paper node (no neighbors considered).</meaning>  
+<score>0.9</score>  
+<reason>No structural or relational information is used; only node features are considered.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PA</name>  
+<meaning>Paper and its direct author neighbors.</meaning>  
+<score>0.7</score>  
+<reason>Authors are highly relevant to a paper's content and domain, providing strong signals for classification.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PC</name>  
+<meaning>Paper and its conference venue.</meaning>  
+<score>0.8</score>  
+<reason>Conferences often represent specific research domains, making this metapath highly discriminative.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PP</name>  
+<meaning>Paper and its directly cited/referenced papers.</meaning>  
+<score>0.6</score>  
+<reason>Citations indicate thematic relationships but may introduce noise if citations span diverse topics.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAP</name>  
+<meaning>Paper-Author-Paper: papers sharing common authors.</meaning>  
+<score>0.75</score>  
+<reason>Co-authorship often reflects shared research interests, useful for classification.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCP</name>  
+<meaning>Paper-Conference-Paper: papers published in the same conference.</meaning>  
+<score>0.85</score>  
+<reason>Conferences are strong indicators of research topics, making this metapath highly important.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPA</name>  
+<meaning>Paper-Paper-Author: authors of cited papers.</meaning>  
+<score>0.5</score>  
+<reason>Indirect author relationships may introduce less relevant information.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPC</name>  
+<meaning>Paper-Paper-Conference: conferences of cited papers.</meaning>  
+<score>0.65</score>  
+<reason>Citation contexts may link to related conferences, but relevance depends on citation consistency.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPP</name>  
+<meaning>Paper-Paper-Paper: multi-hop citations.</meaning>  
+<score>0.4</score>  
+<reason>Long citation chains may dilute thematic relevance.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAPA</name>  
+<meaning>Paper-Author-Paper-Author: authors of co-authored papers.</meaning>  
+<score>0.6</score>  
+<reason>Extended co-authorship networks may introduce noise from diverse collaborations.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAPC</name>  
+<meaning>Paper-Author-Paper-Conference: conferences of co-authored papers.</meaning>  
+<score>0.7</score>  
+<reason>Combines authorship and conference signals, but indirect conferences may be less relevant.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAPP</name>  
+<meaning>Paper-Author-Paper-Paper: citations from co-authored papers.</meaning>  
+<score>0.45</score>  
+<reason>Overly complex and may not preserve meaningful relationships.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCPA</name>  
+<meaning>Paper-Conference-Paper-Author: authors of papers in the same conference.</meaning>  
+<score>0.75</score>  
+<reason>Conference-based author groups can reinforce domain-specific signals.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCPC</name>  
+<meaning>Paper-Conference-Paper-Conference: conferences of papers in the same conference.</meaning>  
+<score>0.8</score>  
+<reason>Strongly reinforces conference-based topic consistency.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCPP</name>  
+<meaning>Paper-Conference-Paper-Paper: citations from papers in the same conference.</meaning>  
+<score>0.55</score>  
+<reason>Adds citation context but may introduce noise.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPAP</name>  
+<meaning>Paper-Paper-Author-Paper: co-authored papers of cited papers.</meaning>  
+<score>0.5</score>  
+<reason>Indirect and potentially noisy relationships.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPCP</name>  
+<meaning>Paper-Paper-Conference-Paper: papers from the same conference as cited papers.</meaning>  
+<score>0.6</score>  
+<reason>Moderately useful if citations are domain-consistent.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPPA</name>  
+<meaning>Paper-Paper-Paper-Author: authors of multi-hop cited papers.</meaning>  
+<score>0.3</score>  
+<reason>Too indirect; relevance is likely diluted.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPPC</name>  
+<meaning>Paper-Paper-Paper-Conference: conferences of multi-hop cited papers.</meaning>  
+<score>0.4</score>  
+<reason>Similar to PPPA but slightly more stable due to conference signals.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPPP</name>  
+<meaning>Paper-Paper-Paper-Paper: multi-hop citations.</meaning>  
+<score>0.2</score>  
+<reason>Highly indirect and unlikely to preserve meaningful relationships.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAPAP</name>  
+<meaning>Paper-Author-Paper-Author-Paper: extended co-authorship chains.</meaning>  
+<score>0.5</score>  
+<reason>Redundant with shorter metapaths like PAP; adds minimal new information.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAPCP</name>  
+<meaning>Paper-Author-Paper-Conference-Paper: co-authored papers' conferences.</meaning>  
+<score>0.65</score>  
+<reason>Combines authorship and conference signals but is complex.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAPPA</name>  
+<meaning>Paper-Author-Paper-Paper-Author: authors of cited co-authored papers.</meaning>  
+<score>0.4</score>  
+<reason>Overly complex and noisy.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAPPC</name>  
+<meaning>Paper-Author-Paper-Paper-Conference: conferences of cited co-authored papers.</meaning>  
+<score>0.55</score>  
+<reason>Slightly more stable than PAPPA due to conference signals.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PAPPP</name>  
+<meaning>Paper-Author-Paper-Paper-Paper: citations from co-authored papers.</meaning>  
+<score>0.3</score>  
+<reason>Too indirect for meaningful classification.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCPAP</name>  
+<meaning>Paper-Conference-Paper-Author-Paper: papers by authors in the same conference.</meaning>  
+<score>0.7</score>  
+<reason>Reinforces conference and authorship signals but is redundant with shorter metapaths.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCPCP</name>  
+<meaning>Paper-Conference-Paper-Conference-Paper: conferences of papers in the same conference.</meaning>  
+<score>0.8</score>  
+<reason>Strongly reinforces conference-based topic consistency, though redundant with PCPC.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCPPA</name>  
+<meaning>Paper-Conference-Paper-Paper-Author: authors of cited papers from the same conference.</meaning>  
+<score>0.5</score>  
+<reason>Indirect and noisy.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCPPC</name>  
+<meaning>Paper-Conference-Paper-Paper-Conference: conferences of cited papers from the same conference.</meaning>  
+<score>0.6</score>  
+<reason>Moderately useful if citations are domain-consistent.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PCPPP</name>  
+<meaning>Paper-Conference-Paper-Paper-Paper: multi-hop citations from conference papers.</meaning>  
+<score>0.35</score>  
+<reason>Too indirect for reliable classification.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPAPA</name>  
+<meaning>Paper-Paper-Author-Paper-Author: extended co-authorship chains of cited papers.</meaning>  
+<score>0.4</score>  
+<reason>Highly indirect and noisy.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPAPC</name>  
+<meaning>Paper-Paper-Author-Paper-Conference: conferences of co-authored cited papers.</meaning>  
+<score>0.55</score>  
+<reason>Slightly more stable than PPAPA due to conference signals.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPAPP</name>  
+<meaning>Paper-Paper-Author-Paper-Paper: citations from co-authored cited papers.</meaning>  
+<score>0.3</score>  
+<reason>Overly complex and noisy.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPCPA</name>  
+<meaning>Paper-Paper-Conference-Paper-Author: authors of papers from the same conference as cited papers.</meaning>  
+<score>0.6</score>  
+<reason>Moderately useful if citations are domain-consistent.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPCPC</name>  
+<meaning>Paper-Paper-Conference-Paper-Conference: conferences of papers from the same conference as cited papers.</meaning>  
+<score>0.7</score>  
+<reason>Reinforces conference-based signals but is redundant with shorter metapaths.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPCPP</name>  
+<meaning>Paper-Paper-Conference-Paper-Paper: citations from papers in the same conference as cited papers.</meaning>  
+<score>0.45</score>  
+<reason>Indirect and noisy.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPPAP</name>  
+<meaning>Paper-Paper-Paper-Author-Paper: extended co-authorship chains of multi-hop citations.</meaning>  
+<score>0.25</score>  
+<reason>Too indirect for meaningful classification.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPPCP</name>  
+<meaning>Paper-Paper-Paper-Conference-Paper: conferences of multi-hop cited papers.</meaning>  
+<score>0.35</score>  
+<reason>Slightly more stable than PPPAP but still too indirect.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPPPA</name>  
+<meaning>Paper-Paper-Paper-Paper-Author: authors of multi-hop citations.</meaning>  
+<score>0.2</score>  
+<reason>Highly noisy and irrelevant.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPPPC</name>  
+<meaning>Paper-Paper-Paper-Paper-Conference: conferences of multi-hop citations.</meaning>  
+<score>0.3</score>  
+<reason>Slightly better than PPPPA but still unreliable.</reason>  
+</metapath>  
+
+<metapath>  
+<name>PPPPP</name>  
+<meaning>Paper-Paper-Paper-Paper-Paper: multi-hop citations.</meaning>  
+<score>0.1</score>  
+<reason>No meaningful signal for classification.</reason>  
+</metapath>  
+
+---
+
+### Summary of Key Metapaths:
+- **High importance (0.7–0.85)**: `PC`, `PCP`, `PCPC`, `PAP`, `PCPA` (conference and authorship signals dominate).  
+- **Moderate importance (0.5–0.7)**: `PPC`, `PAPC`, `PPCPC`, `PPAPC` (mixed or indirect signals).  
+- **Low importance (<0.5)**: `PPPPP`, `PPPPA`, `PPPAP` (overly complex or noisy).  
+
+The scores reflect the **trade-off between relevance and noise**: shorter metapaths with clear semantic meanings (e.g., `PC`, `PAP`) are generally more reliable, while longer metapaths often introduce redundancy or noise.
