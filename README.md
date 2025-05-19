@@ -9,7 +9,7 @@ pytorch
 dgl2.4.0
 
 ## Run
-We have uploaded the LLM generated results for `ACM` dataset, you can see them in `/hgb/cache_data`. If you want to regenerate these results, change the models and API ley in `API.py`.
+We have uploaded the LLM generated results for `ACM` dataset, you can see them in `/hgb/cache_data/ACM`. If you want to regenerate these results, change the models and API ley in `api.py` to your own.
 To run the LNAHGN model, you should
 ```bash
 cd hgb
